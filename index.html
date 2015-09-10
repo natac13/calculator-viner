@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
 
@@ -26,39 +26,58 @@
       <form action="" class="inline-form" id="calculator">
         <div class="row">
           <div class="col-xs-12">
-            <input class="form-control col-xs-12" type="text" name="display" readonly="readonly">
+            <input class="form-control col-xs-12" type="number" name="display">
           </div>
         </div>
         <div class="row">
           <div class="form-group">
-            <button class="btn btn-lg btn-default col-xs-3">1</button>
-            <button class="btn btn-lg btn-default col-xs-3">2</button>
-            <button class="btn btn-lg btn-default col-xs-3">3</button>
-            <button class="btn btn-lg btn-default col-xs-3">+</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="1"
+              name="1">1</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="2"
+              name="2">2</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="3"
+              name="3">3</button>
+            <button class="btn btn-lg btn-info col-xs-3 operator"
+              value="+">+</button>
           </div>
         </div>
         <div class="row">
           <div class="form-group">
-            <button class="btn btn-lg btn-default col-xs-3">4</button>
-            <button class="btn btn-lg btn-default col-xs-3">5</button>
-            <button class="btn btn-lg btn-default col-xs-3">6</button>
-            <button class="btn btn-lg btn-default col-xs-3">-</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="4"
+              name="4">4</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="5"
+              name="5">5</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="6"
+              name="6">6</button>
+            <button class="btn btn-lg btn-info col-xs-3 operator"
+              value="-">-</button>
           </div>
         </div>
         <div class="row">
           <div class="form-group">
-            <button class="btn btn-lg btn-default col-xs-3">7</button>
-            <button class="btn btn-lg btn-default col-xs-3">8</button>
-            <button class="btn btn-lg btn-default col-xs-3">9</button>
-            <button class="btn btn-lg btn-default col-xs-3">*</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="7"
+              name="7">7</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="8"
+              name="8">8</button>
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="9"
+              name="9">9</button>
+            <button class="btn btn-lg btn-info col-xs-3 operator"
+              value="*">*</button>
           </div>
         </div>
         <div class="row">
           <div class="form-group">
-            <button class="btn btn-lg btn-default col-xs-6">0</button>
-            <button class="btn btn-lg btn-default col-xs-3">=</button>
-            <button class="btn btn-lg btn-default col-xs-3">/</button>
+            <button class="btn btn-lg btn-primary col-xs-6 digit" value="0"
+              name="0">0</button>
+            <button class="btn btn-lg btn-info col-xs-3 equal">=</button>
+            <button class="btn btn-lg btn-info col-xs-3 operator"
+              value="/">/</button>
           </div>
+        </div>
+        <div class="row">
+          <button class="btn btn-lg btn-warning col-xs-12 clear">
+            Clear!
+          </button>
         </div>
       </form>
     </div>
@@ -69,5 +88,6 @@
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

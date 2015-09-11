@@ -38,6 +38,7 @@ header h1 {
             transform: rotate(-5deg);
 }
 
+
 #display {
     height: 2.5em;
     font-size: 2em;
@@ -45,6 +46,7 @@ header h1 {
     color: #0E2E3B;
     border: 1px groove #0E2E3B;
 }
+
 .btn-lg {
     font-size: 2em;
     height: 3em;
@@ -55,31 +57,73 @@ header h1 {
     background: radial-gradient(#7DB9B3, black);
     color: #0E2E3B;
     border: 1px solid #aaa;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-info {
     background: radial-gradient(#166678, black);
     color: #7DB9B3;
     border: 1px solid #aaa;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-warning {
     background: radial-gradient(#D8D7C3, black);
     color: #0E2E3B;
     border: 1px solid #aaa;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover, .btn-primary:focus {
     background: radial-gradient(#7DB9B3 50%, #000);
     color: #309FCC;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .btn-info:hover, .btn-info:focus {
     background: radial-gradient(#166678 50%, #000);
     color: #99FBF3;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .btn-warning:hover, .btn-warning:focus {
     background: radial-gradient(#D8D7C3 50%, #000);
     color: #0E2E3B;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+footer {
+    font-size: 1.2em;
+    color: #0E2E3B;
+}
+
+.contact {
+    margin-right: 0.5em;
+    font-size: 2em;
+    color: #0E2E3B;
+    -webkit-transition: font-size 0.2s linear;
+       -moz-transition: font-size 0.2s linear;
+        -ms-transition: font-size 0.2s linear;
+         -o-transition: font-size 0.2s linear;
+            transition: font-size 0.2s linear;
+}
+
+.contact:hover, .contact:focus {
+    text-decoration: none;
+    font-size: 3em;
 }

@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head
+      content must come *after* these tags -->
     <title>Viner's Calculator</title>
 
     <!-- Bootstrap -->
+    <link href='https://fonts.googleapis.com/css?family=Slackey'
+      rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -18,7 +21,10 @@
   <body class="text-center">
     <div class="contanier-fluid">
       <header>
-        <h1>Viner's Calculator</h1>
+        <h1>
+          <span class="left title">Viner's</span> <span class="right title">
+            Calculator</span>
+        </h1>
       </header>
     </div>
 
@@ -26,7 +32,8 @@
       <form action="" class="inline-form" id="calculator">
         <div class="row">
           <div class="col-xs-12">
-            <input class="form-control col-xs-12" type="number" name="display">
+            <input class="form-control col-xs-12" type="number" name="display"
+              id="display">
           </div>
         </div>
         <div class="row">
@@ -67,9 +74,9 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <button class="btn btn-lg btn-primary col-xs-6 digit" value="0"
+            <button class="btn btn-lg btn-primary col-xs-3 digit" value="0"
               name="0">0</button>
-            <button class="btn btn-lg btn-info col-xs-3 equal">=</button>
+            <button class="btn btn-lg btn-info col-xs-6 equal">=</button>
             <button class="btn btn-lg btn-info col-xs-3 operator"
               value="/">/</button>
           </div>

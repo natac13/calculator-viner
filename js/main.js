@@ -14,6 +14,7 @@ $(document).ready(function() {
 
     $cal.on('click', '.digit', function(e) {
         e.preventDefault();
+
         var numStr = $(this).val().toString(); // for display adding
         console.log(numStr);
         var oldNum = $display.val() || '';

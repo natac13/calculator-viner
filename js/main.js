@@ -10,13 +10,14 @@ $(document).ready(function() {
         e.preventDefault();
         $display.val('');
         numbers = [];
-    })
+    });
 
     $cal.on('click', '.digit', function(e) {
         e.preventDefault();
 
         var numStr = $(this).val().toString(); // for display adding
         console.log(numStr);
+        if(numStr === '.' && !$display.val()) { numStr = '0.';}
         var oldNum = $display.val() || '';
         $display.val(oldNum + numStr);
     });

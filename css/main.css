@@ -14,7 +14,6 @@ header h1 {
     color: #D8D7C3;
     margin-top: 1em;
     margin-bottom: 0.5em;
-    position: relative;
     letter-spacing: 0.02em;
 }
 
@@ -23,19 +22,11 @@ header h1 {
 }
 
 .left {
-    position: relative;
-    left: 0.5em;
-    display: inline-block;
-    -webkit-transform: rotate(-23deg);
-            transform: rotate(-23deg);
+
 }
 
 .right {
-    position: relative;
-    left: -1em;
-    display: inline-block;
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
+
 }
 
 

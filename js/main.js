@@ -4,6 +4,7 @@ $(document).ready(function() {
     var $cal = $('#calculator'),
         $display = $cal.find('input[name=display]'),
         numbers = [],
+        tmp,
         op;
 
     $cal.on('click', '.clear', function(e) {
@@ -16,7 +17,6 @@ $(document).ready(function() {
         e.preventDefault();
 
         var numStr = $(this).val().toString(); // for display adding
-        console.log(numStr);
         if(numStr === '.' && !$display.val()) { numStr = '0.';}
         var oldNum = $display.val() || '';
         $display.val(oldNum + numStr);
@@ -27,7 +27,7 @@ $(document).ready(function() {
         op = $(this).val().toString();
         numbers.push(+$display.val());
         $display.val('');
-        console.log(numbers);
+        numbers.forEach((num) => { console.log(num); });
     });
 
     $cal.on('click', '.equal', function(e) {
@@ -35,18 +35,22 @@ $(document).ready(function() {
         numbers.push(+$display.val());
         console.log(numbers);
         if (op === '*') {
-            $display.val(+(numbers[0] * numbers[1]));
+            tmp = +(numbers[0] * numbers[1]);
+            $display.val(tmp);
         }
         if (op === '/') {
-            $display.val(+(numbers[0] / numbers[1]));
+            tmp = +(numbers[0] / numbers[1]);
+            $display.val(tmp);
         }
         if (op === '+') {
-            $display.val(+(numbers[0] + numbers[1]));
+            tmp = +(numbers[0] + numbers[1]);
+            $display.val(tmp);
         }
         if (op === '-') {
-            $display.val(+(numbers[0] - numbers[1]));
+            tmp = +(numbers[0] - numbers[1]);
+            $display.val(tmp);
         }
-
+        numbers = [];
     });
 });
 

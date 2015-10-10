@@ -1,56 +1,58 @@
 'use strict';
 
-$(document).ready(function() {
+$(document).ready(function () {
     var $cal = $('#calculator'),
         $display = $cal.find('input[name=display]'),
         numbers = [],
-        tmp,
-        op;
+        tmp = undefined,
+        op = undefined;
 
-    $cal.on('click', '.clear', function(e) {
+    var calculator = function calculator(equation) {
+        if (equation) {
+            return eval(equation);
+        }
+    };
+    /**
+     * takes in a string and appends to the old display
+     * @param  {string} strVal what to update the display with
+     */
+    var update = function update(strVal) {
+        $display.val($display.val() + strVal);
+    };
+
+    $display.val('');
+
+    $cal.on('click', '.clear', function (e) {
         e.preventDefault();
         $display.val('');
         numbers = [];
     });
 
-    $cal.on('click', '.digit', function(e) {
+    $cal.on('click', '.digit', function (e) {
         e.preventDefault();
 
         var numStr = $(this).val().toString(); // for display adding
-        if(numStr === '.' && !$display.val()) { numStr = '0.';}
-        var oldNum = $display.val() || '';
-        $display.val(oldNum + numStr);
+        numbers.push(numStr);
+        update(numStr);
     });
 
-    $cal.on('click', '.operator', function(e) {
+    $cal.on('click', '.operator', function (e) {
         e.preventDefault();
         op = $(this).val().toString();
-        numbers.push(+$display.val());
-        $display.val('');
-        numbers.forEach((num) => { console.log(num); });
+        numbers.push(op);
+        update(op);
+        numbers.forEach(function (num) {
+            console.log(num);
+        });
     });
 
-    $cal.on('click', '.equal', function(e) {
+    $cal.on('click', '.equal', function (e) {
         e.preventDefault();
-        numbers.push(+$display.val());
+        var eq = $(this).val().toString();
         console.log(numbers);
-        if (op === '*') {
-            tmp = +(numbers[0] * numbers[1]);
-            $display.val(tmp);
-        }
-        if (op === '/') {
-            tmp = +(numbers[0] / numbers[1]);
-            $display.val(tmp);
-        }
-        if (op === '+') {
-            tmp = +(numbers[0] + numbers[1]);
-            $display.val(tmp);
-        }
-        if (op === '-') {
-            tmp = +(numbers[0] - numbers[1]);
-            $display.val(tmp);
-        }
+        var answer = calculator(numbers.join('')).toString();
+        $display.val(answer);
         numbers = [];
+        numbers.push(answer);
     });
 });
-
